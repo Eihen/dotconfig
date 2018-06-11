@@ -31,11 +31,14 @@ B_L_BLUE="\\[\e[1;94m\\]"   # Bold Light Blue
 #B_WHITE="\\[\e[1;97m\\]"   # Bold White
 
 #PS1='[\u@\h \W]\$ '
+
+# Show hostname if it is an SSH connection
 if [ -n "$SSH_CLIENT" ]; then
     SHOW_HOSTNAME="${L_GRAY}@${B_GREEN}\h"
 else
     SHOW_HOSTNAME=''
 fi
+
 #\342\235\257 = ❯
 PS1="${L_GRAY}[\D{%H:%M:%S}] ${B_GREEN}\u${SHOW_HOSTNAME}${L_GRAY}: ${B_BLUE}\w
 ${B_L_BLUE}❯ ${L_GRAY}"
