@@ -1,5 +1,8 @@
-code# Disable Line Wrapping
+# Disable Line Wrapping
 set nowrap
+
+# Set tab size to 4 spaces
+set tabsize 4
 
 # Syntax Highlighting
 include /usr/share/nano-syntax-highlighting/*.nanorc
