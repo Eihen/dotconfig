@@ -105,5 +105,5 @@ then
 fi
 
 
-# Alias for dotconfig managing repository
-alias dotconfig="/usr/bin/git --git-dir=$HOME/.dotconfig --work-tree=$HOME"
+# Alias for dot config managing repository
+alias config="/usr/bin/git --git-dir=$HOME/.dotconfig --work-tree=$HOME"
