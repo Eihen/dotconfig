@@ -40,7 +40,7 @@ else
 fi
 
 #\342\235\257 = ❯
-PS1="${L_GRAY}[\D{%H:%M:%S}] ${B_GREEN}\u${SHOW_HOSTNAME}${L_GRAY}: ${B_BLUE}\w
+PS1="\n${L_GRAY}[\D{%H:%M:%S}] ${B_GREEN}\u${SHOW_HOSTNAME}${L_GRAY}: ${B_BLUE}\w
 ${B_L_BLUE}❯ ${L_GRAY}"
 
 # Stop if failed to set PS1
