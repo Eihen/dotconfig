@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Default increase value (no parameter)
+value=5
+
+# Current backlight value
+current=$(xbacklight | sed -e "s/\.[0-9]*$//g")
+
+# Stops at brightness 1 before going higher
+if [ $current -eq 0 ] ; then
+	xbacklight -set 1
+else
+	if [ ! -z $1 ] ; then
+		value=$1
+	fi
+	xbacklight -inc $value
+fi
