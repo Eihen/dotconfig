@@ -12,7 +12,7 @@ echo '.dotconfig' >> .gitignore
 + Clone this repository as bare into the .dotconfig folder
 
 ```bash
-git clone --bare https://github.com/Eihen/dotconfig
+git clone --bare https://github.com/Eihen/dotconfig $HOME/.dotconfig
 ```
 
 + Define the alias in your current shell scope to make your life easier
