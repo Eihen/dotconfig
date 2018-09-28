@@ -21,6 +21,12 @@ git clone --bare https://github.com/Eihen/dotconfig $HOME/.dotconfig
 alias config="/usr/bin/git --git-dir=$HOME/.dotconfig --work-tree=$HOME"
 ```
 
++ Set the local repository configuration to don't show untracked files (otherwise every file on your home folder will be showed)
+
+```bash
+config config --local status.showUntrackedFiles no
+```
+
 + Checkout the actual repository content
 
 ```bash
@@ -43,7 +49,7 @@ git init --bare $HOME/.dotconfig
 alias config="/usr/bin/git --git-dir=$HOME/.dotconfig --work-tree=$HOME"
 ```
 
-+ Set the repository configuration to don't show untracked files (otherwise every file on your home folder will be showed)
++ Set the local repository configuration to don't show untracked files (otherwise every file on your home folder will be showed)
 
 ```bash
 config config --local status.showUntrackedFiles no
