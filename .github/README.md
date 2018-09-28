@@ -1,5 +1,4 @@
-# My Linux environment configuration files
-
+# My Linux Environment
 
 ## Installing these files on your system
 
@@ -91,4 +90,6 @@ config commit
 config push
 ```
 
-##### Based on this [Atlassian Developer Blog Post](https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/) by [Nicola Paolucci](https://developer.atlassian.com/blog/authors/npaolucci/).
+## Credits
+
+Based on this [Atlassian Developer Blog Post](https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/) by [Nicola Paolucci](https://developer.atlassian.com/blog/authors/npaolucci/).
