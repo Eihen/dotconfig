@@ -69,6 +69,7 @@ then
 	export PATH="${PATH}:$HOME/bin"
 fi
 
+
 ###################
 # Shell Behaviour #
 ###################
