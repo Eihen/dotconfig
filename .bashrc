@@ -50,7 +50,7 @@ else
 fi
 
 PS1_WORKDIR=" \[$BLUE\]\w"
-PS1_PROMPT="\n\[$B_L_BLUE\]❯ ${L_GRAY}"	#\342\235\257 = ❯
+PS1_PROMPT="\n\[$B_L_BLUE\]❯ \[${L_GRAY}\]" #\342\235\257 = ❯
 
 PS1="\n${PS1_TIME} ${PS1_USER}${PS1_HOSTNAME}${L_GRAY}: ${PS1_WORKDIR}${PS1_PROMPT}"
 
