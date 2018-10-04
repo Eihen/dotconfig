@@ -5,7 +5,7 @@
 
 [alias]
     # Tree Log (Selected Branches)
-    tree-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) %C(bold yellow)%an%C(reset) %C(bold green)[%ar]%C(reset) %C(white)%s%C(reset) %C(auto)%d%C(reset)'
+    tree-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) %C(bold green)[%G?]%C(reset) %C(bold yellow)%an%C(reset) %C(bold green)[%ar]%C(reset) %C(white)%s%C(reset) %C(auto)%d%C(reset)'
     trs = !git tree-specific
 
     # Tree Log (All Branches)
