@@ -2,6 +2,7 @@
 set nowrap
 
 # Set tab size to 4 spaces
+set tabstospaces
 set tabsize 4
 
 # Syntax Highlighting

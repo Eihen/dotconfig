@@ -16,7 +16,7 @@
     gpgsign = true
 
 [diff]
-	tool = meld
+    tool = meld
 
 [difftool]
-	prompt = false
+    prompt = false

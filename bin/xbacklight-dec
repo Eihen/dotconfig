@@ -7,12 +7,12 @@ value=5
 current=$(xbacklight | sed -e "s/\.[0-9]*$//g")
 
 if [ ! -z $1 ] ; then
-	value=$1
+    value=$1
 fi
 
 # Stop at brightness 1 before turning screen off (brightness 0)
 if [[ $current -gt 1 && $current -le $value ]] ; then
-	xbacklight -set 1
+    xbacklight -set 1
 else
-	xbacklight -dec $value
+    xbacklight -dec $value
 fi

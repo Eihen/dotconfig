@@ -10,29 +10,29 @@
 # Color Variables #
 ###################
 
-RED='\e[0;31m'			# Red
-B_RED='\e[1;31m'		# Bold Red
+RED='\e[0;31m'          # Red
+B_RED='\e[1;31m'        # Bold Red
 
-GREEN='\e[0;32m'		# Green
-B_GREEN='\e[1;32m'		# Bold Green
+GREEN='\e[0;32m'        # Green
+B_GREEN='\e[1;32m'      # Bold Green
 
-YELLOW='\e[0;33m'		# Yellow
-B_YELLOW='\e[1;33m'		# Bold Yellow
+YELLOW='\e[0;33m'       # Yellow
+B_YELLOW='\e[1;33m'     # Bold Yellow
 
-BLUE='\e[0;34m'			# Blue
-B_BLUE='\e[1;34m'		# Bold Blue
+BLUE='\e[0;34m'         # Blue
+B_BLUE='\e[1;34m'       # Bold Blue
 
-L_GRAY='\e[0;37m'		# Light Gray
-B_L_GRAY='\e[1;37m'		# Bold Light Gray
+L_GRAY='\e[0;37m'       # Light Gray
+B_L_GRAY='\e[1;37m'     # Bold Light Gray
 
-L_GREEN='\e[0;92m'		# Light Green
-B_L_GREEN='\e[0;92m'	# Bold Light Green
+L_GREEN='\e[0;92m'      # Light Green
+B_L_GREEN='\e[0;92m'    # Bold Light Green
 
-L_BLUE='\e[0;94m'		# Light Blue
-B_L_BLUE='\e[1;94m'		# Bold Light Blue
+L_BLUE='\e[0;94m'       # Light Blue
+B_L_BLUE='\e[1;94m'     # Bold Light Blue
 
-WHITE='\e[0;97m'		# White
-B_WHITE='\e[1;97m'		# Bold White
+WHITE='\e[0;97m'        # White
+B_WHITE='\e[1;97m'      # Bold White
 
 
 #####################
@@ -44,9 +44,9 @@ PS1_USER="\[$B_GREEN\]\u"
 
 # Show hostname only if it is an SSH connection
 if [ -n "$SSH_CLIENT" ]; then
-	PS1_HOSTNAME="\[$L_GRAY\]@\[$B_GREEN\]\h"
+    PS1_HOSTNAME="\[$L_GRAY\]@\[$B_GREEN\]\h"
 else
-	PS1_HOSTNAME=''
+    PS1_HOSTNAME=''
 fi
 
 PS1_WORKDIR=" \[$BLUE\]\w"
@@ -66,7 +66,7 @@ PS1="\n${PS1_TIME} ${PS1_USER}${PS1_HOSTNAME}${L_GRAY}: ${PS1_WORKDIR}${PS1_PROM
 # Add ~/bin to $PATH if it exists, is a directory and is not already in path
 if [[ -d $HOME/bin && -z $(echo $PATH | grep -o $HOME/bin) ]]
 then
-	export PATH="${PATH}:$HOME/bin"
+    export PATH="${PATH}:$HOME/bin"
 fi
 
 
@@ -120,7 +120,7 @@ alias grep='grep --color=auto'
 
 # man
 man() {
-	command man "$@"
+    command man "$@"
 }
 
 # dmesg (when outputing to less)
