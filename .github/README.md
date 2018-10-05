@@ -92,4 +92,10 @@ config push
 
 ## Credits
 
-Based on this [Atlassian Developer Blog Post](https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/) by [Nicola Paolucci](https://developer.atlassian.com/blog/authors/npaolucci/).
++ [Nicola Paolucci](https://developer.atlassian.com/blog/authors/npaolucci/) for this [Atlassian Developer Blog Post](https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/) in which this repository structure and instructions are based.
+
++ [Chris Kempson](https://github.com/chriskempson) for the awesome [base16](https://github.com/chriskempson/base16) theme architecture.
+
++ [Kevin Hamer](https://github.com/khamer) for [base16-termite](https://github.com/khamer/base16-termite) and [base16-i3](https://github.com/khamer/base16-i3).
+
++ [Seth Wright](http://sethawright.com) for the **base16-google-dark** for termite and i3 in the above repositories.
