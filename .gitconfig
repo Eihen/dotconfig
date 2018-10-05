@@ -12,6 +12,8 @@
     tree = !git tree-specific --all
     tr = !git tree
 
+    c = checkout
+
 [commit]
     gpgsign = true
 
