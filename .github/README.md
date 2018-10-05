@@ -1,4 +1,4 @@
-# My Windows Subsystem for Linux (WSL) environment
+# My Windows Subsystem for Linux (WSL) Environment
 
 This branch holds a tweaked version of the master branch for using in the Microsoft's [WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux).
 
