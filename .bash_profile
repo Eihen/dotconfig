@@ -3,7 +3,7 @@
 #
 
 ################
-# WLS Specific #
+# WSL Specific #
 ################
 
 # Set default text editor

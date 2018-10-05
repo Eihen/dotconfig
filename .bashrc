@@ -7,7 +7,7 @@
 
 
 ################
-# WLS Specific #
+# WSL Specific #
 ################
 
 # Base16 Shell

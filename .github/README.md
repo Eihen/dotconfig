@@ -1,4 +1,8 @@
-# My Linux Environment
+# My Windows Subsystem for Linux (WSL) environment
+
+This branch holds a tweaked version of the master branch for using in the Microsoft's [WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux).
+
+Note that to clone this branch you need to use a command slightly different from usual (which is noted below), since it's a pain to change branches in a bare repository.
 
 ## Installing these files on your system
 
@@ -11,7 +15,7 @@ echo '.dotconfig' >> .gitignore
 + Clone this repository as bare into the .dotconfig folder
 
 ```bash
-git clone --bare https://github.com/Eihen/dotconfig $HOME/.dotconfig
+git clone --bare -b wsl https://github.com/Eihen/dotconfig $HOME/.dotconfig
 ```
 
 + Define the alias in your current shell scope to make your life easier
