@@ -2,7 +2,8 @@
 
 This branch holds a tweaked version of the master branch for using in the Microsoft's [WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux).
 
-Note that to clone this branch you need to use a command slightly different from usual (which is noted below), since it's a pain to change branches in a bare repository.
+Note that to clone this branch you need to use a command slightly different from usual (which is noted below), since it's a pain to change branches in a bare repository after cloned.
+Also, this banch has submodules so there's an additional step.
 
 ## Installing these files on your system
 
@@ -34,6 +35,13 @@ config config --local status.showUntrackedFiles no
 
 ```bash
 config checkout
+```
+
++ Init and clone the submodules
+
+```bash
+config submodule init
+config submodule update
 ```
 
 + If one or more configuration files already exists the above command will fail with a message about those files being overwritten. To solve this you need to move the list files to a backup folder or just remove them if you don't care.
