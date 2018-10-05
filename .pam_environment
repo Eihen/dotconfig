@@ -1,9 +1,0 @@
-# Set terminal emulator to termite
-TERMINAL=termite
-
-# Set text editor to nano
-EDITOR=nano
-
-# Set SSH to use gpg-agent
-SSH_AGENT_PID   DEFAULT=
-SSH_AUTH_SOCK   DEFAULT="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
