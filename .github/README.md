@@ -3,7 +3,7 @@
 This branch holds a tweaked version of the master branch for using in the Microsoft's [WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux).
 
 Note that to clone this branch you need to use a command slightly different from usual (which is noted below), since it's a pain to change branches in a bare repository after cloned.
-Also, this banch has submodules so there's an additional step.
+Also, this branch has submodules so there's an additional step.
 
 ## Installing these files on your system
 
