@@ -10,7 +10,7 @@ Also, this banch has submodules so there's an additional step.
 + Add the repository folder to a .gitignore in your home folder to avoid recursion problems
 
 ```bash
-echo '.dotconfig' >> .gitignore
+echo '.dotconfig' >> $HOME/.gitignore
 ```
 
 + Clone this repository as bare into the .dotconfig folder
