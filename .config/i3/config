@@ -77,10 +77,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+ccedilla focus right
+#bindsym $mod+j focus left
+#bindsym $mod+k focus down
+#bindsym $mod+l focus up
+#bindsym $mod+ccedilla focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -89,10 +89,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+ccedilla move right
+#bindsym $mod+Shift+j move left
+#bindsym $mod+Shift+k move down
+#bindsym $mod+Shift+l move up
+#bindsym $mod+Shift+ccedilla move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -202,19 +202,27 @@ bar {
     }
 }
 
-# Source: https://gist.github.com/Maddosaurus/3f1c59dba9222b06c476b87a2c425641
-# Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
-# Sreen brightness controls
-bindsym XF86MonBrightnessUp exec $HOME/bin/xbacklight-inc 10 # increase screen brightness (custom script)
-bindsym XF86MonBrightnessDown exec $HOME/bin/xbacklight-dec 10 # decrease screen brightness (custom script)
+# Pulse Volume controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% # Increase
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% # Decrease
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # Mute
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+
+# Sreen brightness controls (Custom Scripts)
+bindsym XF86MonBrightnessUp exec $HOME/bin/xbacklight-inc 10 # Increase
+bindsym XF86MonBrightnessDown exec $HOME/bin/xbacklight-dec 10 # Decrease
+
+
+# Lock screen (i3lock-color)
+# The 'ff' after the color var is because two bytes for alpha channel is required
+bindsym $mod+l exec i3lock --blur 5 --clock --indicator --datestr='%Y-%m-%d' --datecolor=$base04'ff' --timestr='%H:%M:%S' --timecolor=$base04'ff'
+
+
+# Hide borders
 hide_edge_borders smart
