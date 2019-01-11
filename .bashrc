@@ -56,20 +56,20 @@ B_WHITE='\e[1;97m'      # Bold White
 # PS1 Configuration #
 #####################
 
-PS1_TIME="\[$L_GRAY\][\D{%H:%M:%S}]"
-PS1_USER="\[$B_GREEN\]\u"
+PS1_TIME='\['$L_GRAY'\][\D{%H:%M:%S}]'
+PS1_USER='\['$B_GREEN'\]\u'
 
 # Show hostname only if it is an SSH connection
 if [ -n "$SSH_CLIENT" ]; then
-    PS1_HOSTNAME="\[$L_GRAY\]@\[$B_GREEN\]\h"
+    PS1_HOSTNAME='\['$L_GRAY'\]@\['$B_GREEN'\]\h'
 else
     PS1_HOSTNAME=''
 fi
 
-PS1_WORKDIR=" \[$BLUE\]\w"
-PS1_PROMPT="\n\[$B_L_BLUE\]❯ \[${L_GRAY}\]" #\342\235\257 = ❯
+PS1_WORKDIR='\['$BLUE'\]\w'
+PS1_PROMPT='\n\['$B_L_BLUE'\]❯ \['${L_GRAY}'\]' #\342\235\257 = ❯
 
-PS1="\n${PS1_TIME} ${PS1_USER}${PS1_HOSTNAME}${L_GRAY}: ${PS1_WORKDIR}${PS1_PROMPT}"
+PS1="\n${PS1_TIME} ${PS1_USER}${PS1_HOSTNAME}\[${L_GRAY}\]: ${PS1_WORKDIR}${PS1_PROMPT}"
 
 # Stop if failed to set PS1
 [ -z "$PS1" ] && return
