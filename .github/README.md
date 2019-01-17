@@ -2,7 +2,8 @@
 
 This branch holds a tweaked version of the master branch for using in the Microsoft's [WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux).
 
-Note that to clone this branch you need to use a command slightly different from usual (which is noted below), since it's a pain to change branches in a bare repository after cloned.
+Note that the process to clone this branch differs from the normal, as it is showed below. This occurs because manipulating the active branch and remotes in a bare repository is mildly troublesome, but with this cloning process nothing else changes.
+
 Also, this branch has submodules so there's an additional step.
 
 ## Installing these files on your system
@@ -13,11 +14,21 @@ Also, this branch has submodules so there's an additional step.
 echo '.dotconfig' >> $HOME/.gitignore
 ```
 
-+ Clone this repository as bare into the .dotconfig folder
-
++ Clone this repository as bare into the .dotconfig folder (non-standard process)
+    + Create the .dotconfig folder
+    + Init a empty bare repository in it
+    + Add this repository as a remote tracking only this branch
+    + Merge this branch into the empty repository (works as an initial checkout)
 ```bash
-git clone --bare -b wsl https://github.com/Eihen/dotconfig $HOME/.dotconfig
+mkdir $HOME/.dotconfig
+pushd $HOME/.dotconfig
+git init --bare
+git remote add -f -t wsl -m wsl origin https://github.com/Eihen/dotconfig
+git --work-tree=$HOME merge origin
+popd
 ```
+
+Adapted from an exemple in the [git-remote documentation](https://git-scm.com/docs/git-remote).
 
 + Define the alias in your current shell scope to make your life easier
 
