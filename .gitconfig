@@ -1,5 +1,5 @@
 [user]
-    signingkey = 99A857134AECF0EE
+#    signingkey = 
     email = emersonbelancieri@gmail.com
     name = Emerson Belancieri
 
@@ -14,11 +14,17 @@
 
     c = checkout
 
+    fap = fetch --all --prune
+
 [commit]
-    gpgsign = true
+    gpgsign = false
 
 [diff]
     tool = meld
 
 [difftool]
     prompt = false
+#[core]
+#	fileMode = false
+[core]
+	fileMode = true

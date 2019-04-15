@@ -81,9 +81,12 @@ PS1="\n${PS1_TIME} ${PS1_USER}${PS1_HOSTNAME}${L_GRAY}: ${PS1_WORKDIR}${PS1_PROM
 
 # ToDo: Move to system configuration file
 # Add ~/bin to $PATH if it exists, is a directory and is not already in path
-if [[ -d $HOME/bin && -z $(echo $PATH | grep -o $HOME/bin) ]]
-then
+if [[ -d $HOME/bin && -z $(echo $PATH | grep -o $HOME/bin) ]]; then
     export PATH="${PATH}:$HOME/bin"
+fi
+
+if [[ -d $HOME/.composer/vendor/bin && -z $(echo $PATH | grep -i $HOME/.composer/vendor/bin) ]]; then
+    export PATH="${PATH}:$HOME/.composer/vendor/bin"
 fi
 
 
@@ -109,7 +112,7 @@ HISTCONTROL=ignoredups:ignorespace
 export GPG_TTY=$(tty)
 
 # Refresh gpg-agent tty in case user switched into an X session
-gpg-connect-agent updatestartuptty /bye >/dev/null
+gpg-connect-agent updatestartuptty /bye > /dev/null
 
 
 ##################
@@ -163,3 +166,15 @@ alias tp='trash-put'
 # Reminder to use trash-put instead of rm
 alias rm='echo -e "${YELLOW}You should be using ${RED}tp (trash-put)${YELLOW}. '\
 'Use ${RED}\\\rm${YELLOW} if you are really sure."; false'
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+function describe() {
+    if [[ $# -gt 1 ]]; then
+        mysql -D $1 --execute="describe $2";
+    else
+        mysql --execute='describe $1';
+    fi
+}
+
+export DISPLAY=127.0.0.1:0
